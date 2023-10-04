@@ -34,6 +34,14 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: var(--soft-red);
+}
+
+button {
+  cursor: pointer;
+}
+
 nav div {
   display: flex;
   gap: 2.5rem;
@@ -65,15 +73,6 @@ aside div p {
   padding-block-end: 0.5rem;
 }
 
-.article {
-  grid-area: article;
-  display: grid;
-  grid-template-columns: 45% 55%;
-  grid-template-areas:
-    "image image"
-    "title description";
-}
-
 .section-item {
   display: flex;
   gap: 2rem;
@@ -88,7 +87,7 @@ aside div p {
   color: var(--dark-grayish-blue);
 }
 
-.section-item h1 + p {
+.section-item a {
   font-weight: 800;
 }
 
@@ -133,6 +132,12 @@ aside div p {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-weight: 700;
+  transition: 0.5s;
+}
+
+.description button:hover {
+  background-color: var(--very-dark-blue);
+  color: white;
 }
 
 .container {
