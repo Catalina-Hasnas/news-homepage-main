@@ -74,27 +74,35 @@ aside div p {
 }
 
 .section-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 1fr;
   gap: 2rem;
   line-height: 1.5rem;
 }
 
 .section-item h1 {
   color: var(--grayish-blue);
+  margin: 0;
 }
 
-.section-item p:last-child {
+.section-item p {
   color: var(--dark-grayish-blue);
+  margin: 0;
 }
 
 .section-item a {
   font-weight: 800;
+  margin: 0;
 }
 
-.section-item-img {
-  width: 65%;
-  background-size: contain;
-  background-repeat: no-repeat;
+.section-item img {
+  height: 100%;
+}
+
+.section-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .image {
