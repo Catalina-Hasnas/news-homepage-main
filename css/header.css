@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 3rem;
+}
+
+#toggle-menu {
+  border: 0;
+  background-color: white;
+  width: min-content;
+  align-self: end;
+}
+
+.expanded {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  z-index: 2;
+  background-color: white;
+  padding: 2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 2.5rem;
+}

@@ -1,0 +1,24 @@
+aside {
+  grid-area: aside;
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+aside > p {
+  color: var(--soft-orange);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+aside li p:first-child {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+aside li p:last-child {
+  color: var(--grayish-blue);
+  padding-block-end: 0.5rem;
+}

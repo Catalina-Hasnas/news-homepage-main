@@ -1,9 +1,11 @@
 /* ? https://github.com/necolas/normalize.css */
 /* ? small CSS file that provides better cross-browser consistency in the default styling of HTML elements. */
-@import "normalise.css";
-
-/* || Colors */
+@import "normalize.css";
 @import "colors.css";
+@import "header.css";
+@import "aside.css";
+@import "utils.css";
+@import "section-item.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
@@ -18,9 +20,6 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-}
-
-main {
   max-width: 1200px;
   margin: auto;
 }
@@ -42,67 +41,9 @@ button {
   cursor: pointer;
 }
 
-nav div {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-block: 3rem;
-}
-
-.aside {
-  grid-area: aside;
-  background-color: var(--very-dark-blue);
-  color: var(--off-white);
-  padding: 1.5rem;
-  line-height: 1.6;
-}
-
-aside h1 {
-  color: var(--soft-orange);
-  font-size: 3rem;
-  margin: 0;
-}
-
-aside div p {
-  color: var(--grayish-blue);
-  padding-block-end: 0.5rem;
-}
-
-.section-item {
-  display: grid;
-  grid-template-columns: 30% 1fr;
-  gap: 2rem;
-  line-height: 1.5rem;
-}
-
-.section-item h1 {
-  color: var(--grayish-blue);
-  margin: 0;
-}
-
-.section-item p {
-  color: var(--dark-grayish-blue);
-  margin: 0;
-}
-
-.section-item a {
-  font-weight: 800;
-  margin: 0;
-}
-
-.section-item img {
-  height: 100%;
-}
-
-.section-item-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+ul {
+  padding: 0;
+  list-style-type: none;
 }
 
 .image {
@@ -176,37 +117,6 @@ aside div p {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-#mobile-side-menu {
-  display: none;
-  flex-direction: column;
-  gap: 7rem;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 70%;
-  height: 100vh;
-  z-index: 2;
-  background-color: white;
-  padding: 2rem;
-}
-
-#close-menu {
-  align-self: end;
-}
-
-#close-menu,
-#open-menu {
-  border: 0;
-  background-color: white;
-  width: min-content;
-}
-
-#mobile-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
 }
 
 .attribution {
