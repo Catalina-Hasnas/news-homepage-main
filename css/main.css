@@ -14,15 +14,14 @@
 }
 
 html {
-  font-size: 15px;
-  line-height: 1;
+  font-size: 93.75%;
 }
 
 body {
   font-family: "Inter", sans-serif;
-  max-width: 1200px;
-  margin: auto;
   background-color: var(--off-white);
+  min-height: 100vh;
+  line-height: 1;
 }
 
 img {
@@ -45,6 +44,11 @@ button {
 ul {
   padding: 0;
   list-style-type: none;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 .image {
@@ -72,7 +76,7 @@ ul {
   font-size: 1.2rem;
 }
 
-.description button {
+.description a {
   background-color: var(--soft-red);
   padding-block: 1rem;
   padding-inline: 2.5rem;
@@ -85,7 +89,7 @@ ul {
   transition: 0.5s;
 }
 
-.description button:hover {
+.description a:hover {
   background-color: var(--very-dark-blue);
   color: white;
 }
