@@ -47,8 +47,8 @@ ul {
 }
 
 .main-container {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 80rem;
+  margin-inline: auto;
 }
 
 .image {
