@@ -1,3 +1,7 @@
+import "./style.css";
+import imageDesktop from "./assets/images/image-web-3-desktop.jpg";
+import imageMobile from "./assets/images/image-web-3-mobile.jpg";
+
 const toggleMenuButton = document.getElementById("toggle-menu");
 const navBar = document.querySelector("nav");
 const menu = document.getElementById("menu");
@@ -40,12 +44,12 @@ const handleResize = () => {
     menu.classList.add("display-none");
     menu.classList.add("flex-direction-column");
     toggleMenuButton.classList.remove("display-none");
-    articleImage.src = "assets/images/image-web-3-mobile.jpg";
+    articleImage.src = imageMobile;
   } else {
     menu.classList.remove("display-none");
     menu.classList.remove("flex-direction-column");
     toggleMenuButton.classList.add("display-none");
-    articleImage.src = "assets/images/image-web-3-desktop.jpg";
+    articleImage.src = imageDesktop;
   }
 };
 
