@@ -103,7 +103,7 @@ ul {
   gap: 3rem;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 25em) {
   .container {
     display: grid;
     grid-template-columns: 1fr;
