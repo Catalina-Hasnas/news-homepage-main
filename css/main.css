@@ -37,9 +37,14 @@ ul {
   list-style-type: none;
 }
 
+footer {
+  margin-block: 4rem;
+}
+
 .main-container {
   max-width: 80rem;
   margin-inline: auto;
+  padding-inline: 0.3rem;
 }
 
 .image {
@@ -118,7 +123,6 @@ ul {
 .attribution {
   font-size: 11px;
   text-align: center;
-  padding-block-start: 2rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

@@ -2,7 +2,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 3rem;
+  margin-block: 4rem;
+}
+
+@media screen and (max-width: 25em) {
+  header {
+    margin-block: 2rem;
+  }
 }
 
 #toggle-menu {
