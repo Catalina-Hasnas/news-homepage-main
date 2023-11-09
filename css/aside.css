@@ -20,7 +20,8 @@ aside h3 a:hover {
   color: var(--soft-orange);
 }
 
-aside li p {
+aside h4 {
   color: var(--grayish-blue);
   padding-block-end: 0.5rem;
+  font-weight: unset;
 }
