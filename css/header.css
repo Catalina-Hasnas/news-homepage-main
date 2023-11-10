@@ -2,26 +2,44 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 4rem;
+  margin-block: 2rem;
 }
 
-@media screen and (max-width: 25em) {
+.navigation-container {
+  text-align: start;
+}
+
+.menu {
+  display: none;
+  gap: 2.5rem;
+  text-align: start;
+}
+
+.expanded .menu {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 37em) {
   header {
-    margin-block: 2rem;
+    margin-block: 3rem;
+  }
+  .menu {
+    display: flex;
+  }
+  #toggle-menu {
+    display: none;
   }
 }
 
 #toggle-menu {
-  border: 0;
+  border: none;
   background-color: white;
   width: min-content;
-  align-self: end;
 }
 
 .expanded {
-  display: flex;
-  flex-direction: column;
-  gap: 7rem;
+  text-align: end;
   position: fixed;
   top: 0;
   right: 0;
@@ -32,7 +50,6 @@ header {
   padding: 2rem;
 }
 
-.menu {
-  display: flex;
-  gap: 2.5rem;
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }

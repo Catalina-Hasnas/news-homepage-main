@@ -12,22 +12,30 @@
       href="assets/images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/assets/images/image-web-3-mobile.jpg"
+      type="image/jpg"
+    />
+
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/assets/images/image-web-3-desktop.jpg"
+      type="image/jpg"
+    />
+
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
     <div class="main-container">
       <header>
-        <h1
-          style="
-            position: absolute;
-            left: -10000px;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-          "
-        >
-          Latest News in Technology
-        </h1>
+        <h1 class="visually-hidden">Latest News in Technology</h1>
         <svg width="65" height="40" xmlns="http://www.w3.org/2000/svg">
           <title>Logo</title>
           <desc>Logo represents the letter W</desc>
@@ -36,41 +44,50 @@
             fill="#00001A"
           />
         </svg>
-        <div id="backdrop">
-          <nav>
-            <button
-              id="toggle-menu"
-              aria-expanded="false"
-              aria-label="toggle menu"
-              aria-controls="menu"
-            >
-              <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
-                <title>Collapse Menu</title>
-                <desc>Collapse Menu</desc>
-                <g fill="#00001A" fill-rule="evenodd">
-                  <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
-                  <path d="M0 0h40v3H0z" />
-                </g>
-              </svg>
-            </button>
-            <ul id="menu" class="menu">
-              <li><a href="#"> Home </a></li>
-              <li><a href="#"> New </a></li>
-              <li><a href="#"> Popular </a></li>
-              <li><a href="#"> Trending </a></li>
-              <li><a href="#"> Categories </a></li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="navigation-container">
+          <button
+            id="toggle-menu"
+            aria-expanded="false"
+            aria-label="toggle menu"
+            aria-controls="menu"
+          >
+            <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
+              <title>Open Navigation Menu</title>
+              <desc>
+                Button that opens the menu containing navigation links
+              </desc>
+              <g fill="#00001A" fill-rule="evenodd">
+                <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+                <path d="M0 0h40v3H0z" />
+              </g>
+            </svg>
+          </button>
+          <ul id="menu" class="menu">
+            <li><a href="#"> Home </a></li>
+            <li><a href="#"> New </a></li>
+            <li><a href="#"> Popular </a></li>
+            <li><a href="#"> Trending </a></li>
+            <li><a href="#"> Categories </a></li>
+          </ul>
+        </nav>
       </header>
       <main>
         <div class="container">
-          <img
-            class="image"
-            id="article-image"
-            src="assets/images/image-web-3-desktop.jpg"
-            alt="article-image"
-          />
+          <picture class="image">
+            <source
+              media="(min-width: 992px)"
+              srcset="/assets/images/image-web-3-desktop.jpg"
+              width="850"
+              height="400"
+            />
+            <img
+              src="/assets/images/image-web-3-mobile.jpg"
+              alt="article-image"
+              width="480"
+              height="400"
+            />
+          </picture>
+
           <h2 class="title">The Bright Future of Web 3.0?</h2>
           <div class="description">
             <p>
@@ -154,6 +171,26 @@
         </footer>
       </main>
     </div>
+    <template id="close-menu">
+      <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg">
+        <title>Close Navigation Menu</title>
+        <desc>Button that closes the menu containing navigation links</desc>
+        <g fill="#00001A" fill-rule="evenodd">
+          <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+          <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+        </g>
+      </svg>
+    </template>
+    <template id="open-menu">
+      <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
+        <title>Open Navigation Menu</title>
+        <desc>Button that opens the menu containing navigation links</desc>
+        <g fill="#00001A" fill-rule="evenodd">
+          <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+          <path d="M0 0h40v3H0z" />
+        </g>
+      </svg>
+    </template>
   </body>
   <script type="module" src="index.js"></script>
 </html>
