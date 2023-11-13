@@ -47,7 +47,8 @@ header {
   height: 100vh;
   z-index: 2;
   background-color: white;
-  padding: 2rem;
+  padding-block: 2em;
+  padding-inline: 4em 2em;
 }
 
 dialog::backdrop {

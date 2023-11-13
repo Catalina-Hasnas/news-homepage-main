@@ -1,22 +1,12 @@
-// const navDialog = document.getElementById("navigation-dialog");
-
-// // "Show the dialog" button opens the dialog modally
-// openMenuButton.addEventListener("click", () => {
-//   navDialog.showModal();
-// });
-
-// // "Close" button closes the dialog
-// closeMenuButton.addEventListener("click", () => {
-//   navDialog.close();
-// });
-
 const toggleMenuButton = document.getElementById("toggle-menu");
 const navBar = document.querySelector("nav");
 const openMenuButton = document.getElementById("open-menu");
 const closeMenuButton = document.getElementById("close-menu");
+const backdrop = document.getElementById("backdrop");
 
 function toggleMobileMenu() {
   navBar.classList.toggle("expanded");
+  backdrop.classList.toggle("backdrop");
 
   if (navBar.classList.contains("expanded")) {
     toggleMenuButton.setAttribute("aria-expanded", true);
